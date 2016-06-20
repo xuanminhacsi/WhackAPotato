@@ -42,13 +42,13 @@ package
 
         // Amount of time that a mole initially remains up for (seconds).
         // This reduces as moles are whacked during the game.
-        protected const INITIAL_MOLE_UP_TIME = 2.5;
+        protected const INITIAL_MOLE_UP_TIME = 3.0;
 
         // Amount of time between timer ticks (seconds).
         // This reduces as moles are whacked during the game.
         // On each timer tick a decision is made whether to
         // pop up each of the moles.
-        protected const INITIAL_TIMER_PERIOD = 1.0;
+        protected const INITIAL_TIMER_PERIOD = 1.5;
 
         protected var timer:Timer;
         protected var moles:Vector.<Image>;
@@ -185,15 +185,15 @@ package
         {   
             var keycode = event.keyCode;
 
-            if (keycode == LoomKey.A) {
+            if (keycode == LoomKey.LEFTARROW) {
                 whackMole(null, moles[0]);
             }
             
-            if (keycode == LoomKey.S) {
+            if (keycode == LoomKey.UPARROW) {
                 whackMole(null, moles[1]);            
             }
             
-            if (keycode == LoomKey.D) {
+            if (keycode == LoomKey.RIGHTARROW) {
                 whackMole(null, moles[2]);            
             }
             
